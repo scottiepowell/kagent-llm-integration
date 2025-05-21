@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: litellm-config
+  namespace: litellm-gateway
+data:
+  config.yaml: |
+    model_list:
+      - model_name: orca-mini
+        litellm_params:
+          model: ollama/orca-mini
+          api_base: http://ollama-model-phi.ollama-apps.svc.cluster.local:11434
+          api_key: null
+
+    general_settings:
+      master_key: sk-Castlevania#001
+      proxy_batch_write_at: 60
+      database_connection_pool_limit: 10
+
+      # Best Practices
+      disable_spend_logs: true
+      disable_error_logs: true
+      allow_requests_on_db_unavailable: true
+
+    litellm_settings:
+      request_timeout: 600
+      set_verbose: false
+      json_logs: true
+      store_model_in_db: true

@@ -1,0 +1,10 @@
+apiVersion: kagent.dev/v1alpha1
+kind: ModelConfig
+metadata:
+  name: llama3.2
+  namespace: kagent
+spec:
+  model: llama3.2
+  provider: Ollama
+  ollama:
+    host: http://ollama.litellm-gateway.svc.cluster.local:11434

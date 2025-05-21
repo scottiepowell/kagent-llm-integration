@@ -1,0 +1,10 @@
+apiVersion: ollama.ayaka.io/v1
+kind: Model
+metadata:
+  name: orca-mini
+  namespace: ollama-apps
+spec:
+  image: ollama/orca-mini
+
+# Supported models
+# https://docs.litellm.ai/docs/providers/ollama
