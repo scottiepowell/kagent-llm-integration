@@ -37,16 +37,7 @@ kubectl apply -f ollama-operator/models/orca-mini.yaml
 kubectl apply -f ollama-operator/models/hermes2.yaml
 ```
 
-### 4. Deploy LiteLLM (Optional step - Not a possibility to integrate Kagent and Litellm)
-
-Apply the LiteLLM deployment and config:
-
-```bash
-kubectl apply -f litellm/litellm-config.yaml
-kubectl apply -f litellm/litellm-deployment.yaml
-```
-
-### 5. Configure and Deploy KAgent
+### 4. Configure and Deploy KAgent
 
 You can install KAgent using Helm or the CLI. See [kagent/README.md](kagent/README.md) for details.
 
