@@ -55,7 +55,6 @@ Or apply the provided manifests in `kagent/` for custom configuration.
 ## Configuration Overview
 
 - **Ollama Models**: Defined in [ollama-operator/models/](ollama-operator/models/) (e.g., `orca-mini.yaml`, `hermes2.yaml`).
-- **LiteLLM**: Configured in `litellm/litellm-config.yaml` and deployed via `litellm/litellm-deployment.yaml`.
 - **KAgent**: Values and model config in `kagent/values.yaml` and `kagent/llama3.2-config.yaml`. Example agent in `kagent/kagent-agent.yaml`.
 
 ---
