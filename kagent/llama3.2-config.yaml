@@ -7,4 +7,4 @@ spec:
   model: llama3.2
   provider: Ollama
   ollama:
-    host: http://ollama.litellm-gateway.svc.cluster.local:11434
+    host: http://ollama.ollama-apps.svc.cluster.local:11434
