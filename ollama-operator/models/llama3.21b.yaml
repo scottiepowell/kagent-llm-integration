@@ -1,0 +1,10 @@
+apiVersion: ollama.ayaka.io/v1
+kind: Model
+metadata:
+  name: llama3.2:1b
+  namespace: ollama-apps
+spec:
+  image: ollama/llama3.2:1b
+
+# Supported models
+# https://docs.litellm.ai/docs/providers/ollama
