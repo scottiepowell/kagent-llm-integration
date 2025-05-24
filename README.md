@@ -35,6 +35,7 @@ Apply the model manifests for Ollama:
 ```bash
 kubectl apply -f ollama-operator/models/orca-mini.yaml
 kubectl apply -f ollama-operator/models/hermes2.yaml
+kubectl apply -f ollama-operator/models/models/llama3.21b.yaml
 ```
 
 ### 4. Configure and Deploy KAgent
