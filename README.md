@@ -7,7 +7,6 @@ This repository provides Kubernetes manifests and configuration to integrate [KA
 ## Repository Structure
 
 - **kagent/**: KAgent Helm values and configuration manifests.
-- **litellm/**: LiteLLM deployment and configuration.
 - **ollama-operator/**: CRDs and model manifests for Ollama Operator.
 
 ---
@@ -18,7 +17,6 @@ This repository provides Kubernetes manifests and configuration to integrate [KA
 
 ```bash
 kubectl create namespace ollama-apps
-kubectl create namespace litellm-gateway
 kubectl create namespace kagent
 ```
 
