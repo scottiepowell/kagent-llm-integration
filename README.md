@@ -2,6 +2,7 @@
 
 This repository provides Kubernetes manifests and configuration to integrate [KAgent](https://kagent.dev/) with a locally hosted [Ollama](https://ollama.com/) instance. The setup enables you to run and manage LLMs (such as orca-mini and hermes-2-pro-llama-3-8b) on your Kubernetes cluster and interact with them via KAgent.
 
+A complete walkthrough has been published on Medium [here](https://medium.com/@renjithvr11/integrating-kagent-and-ollama-bringing-agentic-ai-closer-to-kubernetes-995f0b1f6134)
 ---
 
 ## Repository Structure
@@ -70,3 +71,7 @@ Or apply the provided manifests in `kagent/` for custom configuration.
 ## License
 
 See [LICENSE](LICENSE).
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=mysticrenji/kagent-llm-integration&type=Date)](https://www.star-history.com/#mysticrenji/kagent-llm-integration&Date)
