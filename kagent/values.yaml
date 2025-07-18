@@ -2,7 +2,7 @@
 replicaCount: 1
 
 global:
-  tag: "0.3.1"
+  tag: "0.4.3"
 
 # https://kagent.dev/docs/getting-started/configuring-providers
 providers:
@@ -42,7 +42,8 @@ controller:
   # -- Namespaces the controller should watch.
   # If empty, the controller will watch ONLY release namespace.
   # @default -- [] (watches release namespace)
-  watchNamespaces: []
+  watchNamespaces:
+    - kagent
   #  - watch-ns-1
   #  - watch-ns-2
 
