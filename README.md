@@ -34,7 +34,7 @@ Apply the model manifests for Ollama:
 ```bash
 kubectl apply -f ollama-operator/models/orca-mini.yaml
 kubectl apply -f ollama-operator/models/hermes2.yaml
-kubectl apply -f ollama-operator/models/models/llama3.2.yaml
+kubectl apply -f ollama-operator/models/llama3.21b.yaml
 ```
 
 ### 4. Configure and Deploy KAgent
@@ -45,7 +45,7 @@ Example with Helm:
 
 ```bash
 helm install kagent-crds oci://ghcr.io/kagent-dev/kagent/helm/kagent-crds --namespace kagent --create-namespace
-helm install kagent oci://ghcr.io/kagent-dev/kagent/helm/kagent --namespace kagent --values values.yaml
+helm install kagent oci://ghcr.io/kagent-dev/kagent/helm/kagent --namespace kagent --values kagent/values.yaml
 ```
 
 Or apply the provided manifests in `kagent/` for custom configuration.
