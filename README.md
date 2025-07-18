@@ -1,6 +1,6 @@
 # KAgent + Ollama Integration
 
-This repository provides Kubernetes manifests and configuration to integrate [KAgent](https://kagent.dev/) with a locally hosted [Ollama](https://ollama.com/) instance. The setup enables you to run and manage LLMs (such as orca-mini and hermes-2-pro-llama-3-8b) on your Kubernetes cluster and interact with them via KAgent.
+This repository provides Kubernetes manifests and configuration to integrate [KAgent](https://kagent.dev/) with a locally hosted [Ollama](https://ollama.com/) instance. The setup enables you to run and manage LLMs (such as orca-mini and tinyllama-1.1b) on your Kubernetes cluster and interact with them via KAgent.
 
 A complete walkthrough has been published on Medium [here](https://medium.com/@renjithvr11/integrating-kagent-and-ollama-bringing-agentic-ai-closer-to-kubernetes-995f0b1f6134)
 ---
@@ -33,7 +33,7 @@ Apply the model manifests for Ollama:
 
 ```bash
 kubectl apply -f ollama-operator/models/orca-mini.yaml
-kubectl apply -f ollama-operator/models/hermes2.yaml
+kubectl apply -f ollama-operator/models/tinyllama.yaml
 kubectl apply -f ollama-operator/models/llama3.21b.yaml
 ```
 
@@ -54,7 +54,7 @@ Or apply the provided manifests in `kagent/` for custom configuration.
 
 ## Configuration Overview
 
-- **Ollama Models**: Defined in [ollama-operator/models/](ollama-operator/models/) (e.g., `orca-mini.yaml`, `hermes2.yaml`).
+- **Ollama Models**: Defined in [ollama-operator/models/](ollama-operator/models/) (e.g., `orca-mini.yaml`, `tinyllama.yaml`).
 - **KAgent**: Values and model config in `kagent/values.yaml` and `kagent/llama3.2-config.yaml`. Example agent in `kagent/kagent-agent.yaml`.
 
 ---

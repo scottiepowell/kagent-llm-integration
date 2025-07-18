@@ -1,10 +1,10 @@
 apiVersion: ollama.ayaka.io/v1
 kind: Model
 metadata:
-  name: hermes-2-pro-llama-3-8b
+  name: tinyllama-1.1b
   namespace: ollama-apps
 spec:
-  image: cas/hermes-2-pro-llama-3-8b
+  image: tinyllama:1.1b
 
 # Supported models
 # https://docs.litellm.ai/docs/providers/ollama
