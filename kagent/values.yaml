@@ -91,6 +91,21 @@ ui:
       memory: 1Gi
   env: [] # Additional environment variables for the ui can be added here
 
+tools:
+  image:
+    registry: cr.kagent.dev
+    repository: kagent-dev/kagent/tools
+    tag: "" # Will default to global, then Chart version
+    pullPolicy: IfNotPresent
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+    limits:
+      cpu: 1000m
+      memory: 512Mi
+  env: [] # Additional environment variables for the tools server can be added here
+
 service:
   type: ClusterIP
   ports:
