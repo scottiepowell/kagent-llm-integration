@@ -52,7 +52,7 @@ spec:
             {{- end }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.controller.image.registry }}/{{ .Values.controller.image.repository }}:{{ coalesce .Values.global.tag .Values.controller.image.tag .Chart.Version }}"
+          image: "{{ .Values.controller.image.registry }}/{{ .Values.controller.image.repository }}:{{ coalesce .Values.controller.image.tag .Values.global.tag .Chart.Version }}"
           imagePullPolicy: {{ .Values.controller.image.pullPolicy }}
           resources:
             {{- toYaml .Values.controller.resources | nindent 12 }}
@@ -80,7 +80,7 @@ spec:
         - name: app
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.app.image.registry }}/{{ .Values.app.image.repository }}:{{ coalesce .Values.global.tag .Values.app.image.tag .Chart.Version }}"
+          image: "{{ .Values.app.image.registry }}/{{ .Values.app.image.repository }}:{{ coalesce .Values.app.image.tag .Values.global.tag .Chart.Version }}"
           imagePullPolicy: {{ .Values.app.image.pullPolicy }}
           env:
             - name: LOG_LEVEL
@@ -113,7 +113,7 @@ spec:
         - name: ui
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.ui.image.registry }}/{{ .Values.ui.image.repository }}:{{ coalesce .Values.global.tag .Values.ui.image.tag .Chart.Version }}"
+          image: "{{ .Values.ui.image.registry }}/{{ .Values.ui.image.repository }}:{{ coalesce .Values.ui.image.tag .Values.global.tag .Chart.Version }}"
           imagePullPolicy: {{ .Values.ui.image.pullPolicy }}
           env:
             - name: NEXT_PUBLIC_BACKEND_URL
@@ -141,7 +141,7 @@ spec:
           - "{{ .Values.service.ports.tools.targetPort }}"
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.tools.image.registry }}/{{ .Values.tools.image.repository }}:{{ coalesce .Values.global.tag .Values.tools.image.tag .Chart.Version }}"
+          image: "{{ .Values.tools.image.registry }}/{{ .Values.tools.image.repository }}:{{ coalesce .Values.tools.image.tag .Values.global.tag .Chart.Version }}"
           imagePullPolicy: {{ .Values.tools.image.pullPolicy }}
           resources:
             {{- toYaml .Values.tools.resources | nindent 12 }}
