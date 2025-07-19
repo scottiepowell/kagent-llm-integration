@@ -59,6 +59,18 @@ tests:
           path: spec.template.spec.containers[2].image
           value: cr.kagent.dev/kagent-dev/kagent/ui:v1.0.0
 
+  - it: should prefer tools tag over global tag when provided
+    set:
+      global:
+        tag: "v1.0.0"
+      tools:
+        image:
+          tag: "0.0.7"
+    asserts:
+      - equal:
+          path: spec.template.spec.containers[3].image
+          value: ghcr.io/kagent-dev/kagent/tools:0.0.7
+
   - it: should have correct resource limits and requests
     asserts:
       - equal:
