@@ -45,8 +45,12 @@ Example with Helm:
 
 ```bash
 helm install kagent-crds oci://ghcr.io/kagent-dev/kagent/helm/kagent-crds --namespace kagent --create-namespace
-helm install kagent oci://ghcr.io/kagent-dev/kagent/helm/kagent --namespace kagent --values kagent/values.yaml
+helm install kagent oci://ghcr.io/kagent-dev/kagent/helm/kagent \
+  --namespace kagent \
+  --values kagent/values.yaml
 ```
+# The included values file pins `global.tag` to 0.4.3 so all images, including
+# the tools server, are pulled from the correct registry.
 
 Or apply the provided manifests in `kagent/` for custom configuration.
 
